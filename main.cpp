@@ -9,7 +9,7 @@ int main() {
 
     std::cout << "Enter the path to the text file\n"
                  "you want to open (Example: C:\\...\\text.txt):\n";
-    std::getline(std::cin, filePath);           // C:\\Text_files\\text.txt
+    std::getline(std::cin, filePath);           
     std::cout << std::endl;
 
     textFile.open(filePath, std::ios::binary);
