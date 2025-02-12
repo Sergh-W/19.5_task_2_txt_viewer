@@ -25,7 +25,7 @@ int main() {
 
         while (!textFile.eof())
         {
-            char buffer[100];
+            char buffer[102];
             textFile.read(buffer, sizeof(buffer));
             buffer[textFile.gcount()] = '\0';
             std::cout << buffer;
