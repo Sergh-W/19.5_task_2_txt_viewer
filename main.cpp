@@ -14,14 +14,16 @@ int main()
     {
         std::cout << "File opened." << std::endl;
         std::cout << std::endl;
+        int size = 24;
+        char buffer[size];
 
         while (!textFile.eof())
         {
-            char buffer[20];
-            textFile.read(buffer, sizeof(buffer));
-            std::string str(buffer, textFile.gcount());
-            std::cout << str << std::endl;
+            textFile.read(buffer, size);
+            buffer[textFile.gcount()] = '\0';
+            std::cout << buffer;
         }
+
     }
 
     textFile.close();
